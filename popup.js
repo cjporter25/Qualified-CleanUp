@@ -47,9 +47,23 @@ cleanBtn.addEventListener('click', () => {
 
 // Copy button logic
 copyBtn.addEventListener('click', () => {
+  const statusMsg = document.getElementById('copyStatus');
+
   navigator.clipboard.writeText(outputEl.value)
-    .then(() => alert('Copied to clipboard!'))
-    .catch(err => console.error('Copy failed:', err));
+    .then(() => {
+      statusMsg.style.display = 'block';
+
+      // Optional: fade out after 2 seconds
+      setTimeout(() => {
+        statusMsg.style.display = 'none';
+      }, 2000);
+    })
+    .catch(err => {
+      console.error('Copy failed:', err);
+      statusMsg.textContent = 'Copy failed!';
+      statusMsg.style.color = 'red';
+      statusMsg.style.display = 'block';
+    });
 });
 
 // Clear button logic
