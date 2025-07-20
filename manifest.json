@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Qualified CleanUp",
-    "version": "0.1",
+    "version": "0.2",
     "description": "Removes duplicated statements after 'I say:'. Makes chat copying more readable.",
     "permissions": [
         "tabs",

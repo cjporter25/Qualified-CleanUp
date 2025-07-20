@@ -1,10 +1,10 @@
-# Text Parser Extension
+# Qualified CleanUp Extension
 
 ## Overview
 
-This is a simple browser extension that helps clean up copied chat logs or transcribed conversations by removing repeated lines that follow a specific timestamped format. 
+This is a simple browser extension that helps clean up copied chat logs copied from the Qualified chat service by removing repeated lines that follow the initial timestamped statement.
 
-It is compatible with modern desktop browsers that support Manifest V3, including Chrome, Firefox, Edge, and Safari (via Xcode conversion).
+It is compatible with modern desktop browsers that support Manifest V3, including Chrome, Firefox, Edge, and Safari (in the future).
 
 ---
 
@@ -23,40 +23,36 @@ It is compatible with modern desktop browsers that support Manifest V3, includin
 
 
 - Displays the cleaned output below the input box
-- Provides a "Copy to Clipboard" button to copy the cleaned text
-- Automatically saves and restores both input and output even after the popup is closed
+- Provides a "Copy" button to copy the cleaned text
+- Automatically saves and restores both input and output in local storage even after the popup is closed
 
 ---
 
 ## How to Use
 
-1. Paste the raw text into the first text box.
-2. Click **"Parse"** to clean it.
+1. Paste the raw Qualified text into the first text box.
+2. Click **"Clean"** to clean it.
 3. View the result in the second text box.
-4. Click **"Copy to Clipboard"** to use the cleaned result elsewhere.
+4. Click **"Copy"** to use the cleaned result elsewhere.
 
 ---
 
 ## Development Notes
 
 - Built using HTML, CSS, and JavaScript
-- Uses `chrome.storage.local` to persist data
+- Uses `chrome.storage.local` to hold data just in case.
 - Clipboard access uses the modern `navigator.clipboard` API
 - Popup UI is styled with basic inline CSS for simplicity
 
 ---
 
 ## Compatibility
-
-✅ Google Chrome  
-✅ Microsoft Edge  
-✅ Firefox  
-🛠 Safari (requires wrapping using Safari Web Extension Converter & Xcode)
+- Google Chrome  
+- Microsoft Edge  
+- Firefox  
+- Safari (requires wrapping using Safari Web Extension Converter & Xcode)
 
 ---
 
 ## License
-
 MIT License – free to use and modify
-
-
